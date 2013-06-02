@@ -15,3 +15,5 @@ end
 # Postgresql
 #
 include_recipe "postgresql"
+
+gem_package "bundler"
