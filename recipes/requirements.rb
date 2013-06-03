@@ -11,9 +11,4 @@ ruby_build_ruby "2.0.0-p195" do
   prefix_path "/usr/local/"
 end
 
-#
-# Postgresql
-#
-include_recipe "postgresql"
-
 gem_package "bundler"

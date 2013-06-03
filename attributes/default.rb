@@ -1,0 +1,1 @@
+default['coinz']['db']['user'] = 'coinz'

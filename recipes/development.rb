@@ -6,3 +6,4 @@
 #
 
 include_recipe "coinz::requirements"
+include_recipe "coinz::database"
