@@ -30,6 +30,7 @@ postgresql_connection_info = {:host => "localhost",
 # Doing it manually because the LWRP's did not work
 ruby_block "Create db user with createdb privilege" do
   block do
+    require 'pg'
     PGconn.open(postgresql_connection_info) do |conn|
       begin
         result = conn.exec "CREATE ROLE #{node['coinz']['db']['user']} WITH CREATEDB LOGIN PASSWORD '#{node['coinz']['db']['password']}'"

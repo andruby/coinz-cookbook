@@ -11,4 +11,7 @@ ruby_build_ruby "2.0.0-p195" do
   prefix_path "/usr/local/"
 end
 
-gem_package "bundler"
+gem_package "bundler" do
+  gem_binary "/usr/local/bin/gem"
+  options("--no-ri --no-rdoc")
+end
