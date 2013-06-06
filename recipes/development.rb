@@ -9,8 +9,10 @@
 
 include_recipe "coinz::requirements"
 include_recipe "coinz::database"
+include_recipe "coinz::crypto_coins"
 
 # Run bundle install as sudo in /vagrant
 execute "bundle install" do
   cwd "/vagrant"
 end
+
