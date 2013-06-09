@@ -10,6 +10,6 @@ depends "ruby_build", "~> 0.8.0"
 depends "postgresql", "~> 3.0.0"
 depends "apt", "~> 1.10.0"
 depends "database", "~> 1.4.0"
-depends "crypto-coin", "~> 0.2.1"
+depends "crypto-coin", "~> 0.2.2"
 
 supports "ubuntu"
