@@ -12,7 +12,7 @@ include_recipe "coinz::database"
 include_recipe "coinz::crypto_coins"
 
 # Run bundle install as sudo in /vagrant
-bash "bundle install --deployment" do
+bash "bundle install --path vendor/bundle" do
   cwd "/vagrant"
   user "vagrant"
 end
