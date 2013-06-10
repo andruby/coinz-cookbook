@@ -25,7 +25,33 @@ crypto_coin "worldcoin" do
   rpcpassword   "mtrvhninryeu53wzmczc"
 end
 
-%w{litecoind bbqcoind worldcoind}.each do |coind|
+crypto_coin "namecoin" do
+  repository    "https://github.com/namecoin/namecoin.git"
+  revision      "nc0.3.51.00^{}"
+  port          8334
+  rpcport       7004
+  rpcpassword   "32rfh3qr8rdbg4g4wa22"
+end
+
+
+crypto_coin "ppcoin" do
+  repository    "https://github.com/ppcoin/ppcoin.git"
+  revision      "4b084c3d984dd82b96013e9203ac08051971c733"
+  port          9901
+  rpcport       7005
+  rpcpassword   "h2508kn13fctvs15jrge"
+end
+
+crypto_coin "digitalcoin" do
+  repository    "https://github.com/andruby/digitalcoinSource.git"
+  revision      "116fb696d4f1657891007083e19ea10443ad1222"
+  port          7999
+  rpcport       7006
+  rpcpassword   "2j81jt21g44k4yp9b9fg"
+end
+
+
+%w{litecoind bbqcoind worldcoind namecoind ppcoind digitalcoind}.each do |coind|
   service(coind) do
     provider Chef::Provider::Service::Upstart
     action :start
