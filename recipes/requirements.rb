@@ -18,5 +18,3 @@ gem_package "bundler" do
   gem_binary "/usr/local/bin/gem"
 end
 
-# Extra dependency for namecoin
-package "libglibmm-2.4-dev"

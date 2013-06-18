@@ -25,6 +25,9 @@ crypto_coin "worldcoin" do
   rpcpassword   "mtrvhninryeu53wzmczc"
 end
 
+# Extra dependency for namecoin
+package "libglibmm-2.4-dev"
+
 crypto_coin "namecoin" do
   repository    "https://github.com/namecoin/namecoin.git"
   revision      "nc0.3.51.00^{}"
