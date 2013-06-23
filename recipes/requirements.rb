@@ -14,7 +14,6 @@ group "ruby" do
   members "vagrant"
 end
 
-
 # Compile ruby 2.0.0 from source
 include_recipe "ruby_build"
 ruby_build_ruby "2.0.0-p195" do
@@ -24,7 +23,7 @@ end
 
 # Give users in the ruby group access to install/delete gems
 bash "Set group write permission on ruby gem path" do
-  code "chmod -R g+wt /usr/local/lib/ruby/gems/2.0.0"
+  code "chmod -R g+wt /usr/local/lib/ruby/gems"
 end
 
 # Install bundler with the correct ruby 2.0.0 gem binary
