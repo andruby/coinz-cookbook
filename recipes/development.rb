@@ -16,8 +16,8 @@ include_recipe "crypto-coin::default"
 # Digitalcoin is a fast coin (20s target time)
 # with a relatively short blockchain (150K blocks in June 2013)
 crypto_coin "digitalcoin" do
-  repository    "https://github.com/andruby/digitalcoinSource.git"
-  revision      "116fb696d4f1657891007083e19ea10443ad1222"
+  repository    "https://github.com/baritus/digitalcoinSource.git"
+  revision      "a87f041849aebf0d7cdef3a8df60115023a417cc"
   port          7999
   rpcport       7006
   rpcpassword   "2j81jt21g44k4yp9b9fg"
