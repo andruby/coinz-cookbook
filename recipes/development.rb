@@ -27,10 +27,3 @@ service "digitalcoind" do
   provider Chef::Provider::Service::Upstart
   action :start
 end
-
-# Run bundle install as vagrant user in /vagrant
-bash "bundle install" do
-  cwd "/vagrant"
-  user "vagrant"
-end
-
