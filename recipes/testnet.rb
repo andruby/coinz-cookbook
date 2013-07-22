@@ -10,7 +10,7 @@ crypto_coin "bitcoin" do
   rpcpassword   "fa4rhioylwmmzfff"
   conf({
     testnet: 1,
-    gen: 1
+    gen: 0
   })
 end
 
@@ -22,6 +22,16 @@ crypto_coin "litecoin" do
   rpcpassword   "7a4kh3i2m9tfdxf7"
   conf({
     testnet: 1,
-    gen: 1
+    gen: 0
   })
+end
+
+service "bitcoind" do
+  provider Chef::Provider::Service::Upstart
+  action :start
+end
+
+service "litecoind" do
+  provider Chef::Provider::Service::Upstart
+  action :start
 end
