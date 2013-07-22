@@ -31,3 +31,6 @@ gem_package "bundler" do
   gem_binary "/usr/local/bin/gem"
 end
 
+# Redis
+include_recipe "redisio::install"
+include_recipe "redisio::enable"
